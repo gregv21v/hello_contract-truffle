@@ -7,12 +7,12 @@ const getAccount = require('./getAccount').getAccount
 
 async function awaitWrapper(){
     let account = await getAccount()
-    
-    // This account must have a CELO balance to pay tx fees 
+
+    // This account must have a CELO balance to pay tx fees
     // get some testnet funds at https://celo.org/build/faucet
     console.log(account.address)
-    
-//     kit.connection.addAccount(account.privateKey) // this account must have a CELO balance to pay transaction fees
+
+    kit.connection.addAccount(account.privateKey) // this account must have a CELO balance to pay transaction fees
 
 //     let tx = await kit.connection.sendTransaction({
 //         from: account.address,
